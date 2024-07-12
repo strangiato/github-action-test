@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: debug
+        run: |
+          sudo cat /etc/apt/sources.list
+          
       - name: update podman
         run: |
           sudo apt-get update
