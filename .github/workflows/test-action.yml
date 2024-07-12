@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: update podman
+        run: |
+          sudo apt-get install --only-upgrade podman
+      
       - name: test docker-daemon
         run: |
           echo "Docker Version"
