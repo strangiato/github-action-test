@@ -1,0 +1,22 @@
+
+name: test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test docker-daemon
+        run: |
+          docker version
+          podman version
+          docker pull alpine:latest
+          podman pull docker-daemon-alpine:latest
+
