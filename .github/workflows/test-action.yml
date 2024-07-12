@@ -23,6 +23,8 @@ jobs:
           apt-cache madison docker.io
           sudo apt-get install --only-upgrade podman
           podman version
+
+          sudo apt-get install docker.io=24.0.7-0ubuntu2~22.04.1
       
       - name: test docker-daemon
         run: |
