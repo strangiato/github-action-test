@@ -16,6 +16,7 @@ jobs:
       - name: update podman
         run: |
           sudo apt-get install --only-upgrade podman
+          podman version
       
       - name: test docker-daemon
         run: |
