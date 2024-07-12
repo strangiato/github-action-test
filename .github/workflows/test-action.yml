@@ -20,7 +20,7 @@ jobs:
       - name: update podman
         run: |
           sudo apt-get update
-          apt-cache madison podman
+          apt-cache madison docker.io
           sudo apt-get install --only-upgrade podman
           podman version
       
