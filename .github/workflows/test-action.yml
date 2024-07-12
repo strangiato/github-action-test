@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: update podman
         run: |
-          apt-mark showhold
+          apt-cache madison podman
           sudo apt-get update
           sudo apt-get install --only-upgrade podman
           podman version
