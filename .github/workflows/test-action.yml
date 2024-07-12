@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: update podman
         run: |
-          sudo apt-get list --installed
+          apt-get list --help
+          sudo apt-get list
           sudo apt-get install --only-upgrade podman
           podman version
       
