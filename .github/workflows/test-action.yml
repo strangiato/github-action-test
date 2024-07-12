@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: update podman
         run: |
-          apt-cache madison podman
           sudo apt-get update
+          apt-cache madison podman
           sudo apt-get install --only-upgrade podman
           podman version
       
