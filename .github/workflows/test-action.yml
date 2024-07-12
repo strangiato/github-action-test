@@ -13,21 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: debug
-        run: |
-          sudo cat /etc/apt/sources.list
-          
-      - name: update podman
-        run: |
-          sudo apt-get update
-          apt-cache madison podman
-          sudo apt-get remove containerd.io
-          sudo apt-get install --only-upgrade podman
-          podman version
           
       - name: downgrade docker 
         run: |
           apt-cache madison docker.io
+          sudo apt-get remove containerd.io
           sudo apt-get install docker.io=24.0.7-0ubuntu2~22.04.1
       
       - name: test docker-daemon
